@@ -1,6 +1,7 @@
 # Read to Understand code better!
 # keyword is the terminology and news is filtered with reference to this keyword.
-# content finds all the news like everything available on the news portal
+# fetch_content finds all the news like everything available on the news portal
+# latest_content fetches the most recent news from the news portal
 # printed_content stores all the content that has been printed 
 # filtered_content is the content that contains keyword
 # i is the iterative news like every news one by one
