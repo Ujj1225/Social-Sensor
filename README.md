@@ -13,6 +13,6 @@ Now, the grand finale – Step three: the Notifying System! Drumroll, please. So
 With Social Sensor, take command of your digital destiny, navigate the seas of social media, and emerge as the hero of your own story. Ready to embark on this digital adventure? Strap in, and let's redefine your online legacy! 🌐🦸‍♂️ #SocialSensor #DigitalGuardian #OwnYourStory
 
 # Authors
-Ujjwal Jha
-Raj Kumar Paneru
-Yujan Subedi
+Ujjwal Jha   
+Raj Kumar Paneru    
+Yujan Subedi    
