@@ -14,9 +14,12 @@ soup = BeautifulSoup(result.text, "lxml")
 content = soup.find_all("div", class_ = "ok-post-contents")
 
 printed_content = set()
- 
+
+print("Enter keyword to search for: ", end='')
+keyword = input()
+
 for i in content:
-    keyword = 'PatAn'
+    # keyword = 'PatAn'
     filtered_content = i.h2.a.string.strip().lower()
     # Here, .strip() is used to make comparision without taking whitespace in account
     # And, .lower() is used to make all the content to lower case so the comparision is case-insensitive
