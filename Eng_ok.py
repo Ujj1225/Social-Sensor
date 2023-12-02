@@ -1,6 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def fetch_content(): 
     url = "https://english.onlinekhabar.com/"
@@ -30,5 +34,4 @@ while True:
     if new_news: 
         print('''\nNo more NEWS for now.\nWill inform whenever something new comes up!\n''')
             
-    time.sleep(300)
-    # The time 300 is in seconds so it checks after every 5 minutes. 
+    time.sleep(os.getenv("DELAY"))
