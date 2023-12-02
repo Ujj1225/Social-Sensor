@@ -1,0 +1,2 @@
+# ignore .env file that stores email and password
+.env
