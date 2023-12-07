@@ -1,5 +1,14 @@
 # Read to Understand code better!
 
+# Dependeency:
+pandas for data storing, lxml, beautifulsoup4 and requests for web srcapping
+```bash
+pip install pandas
+pip install beautifulsoup4
+pip install lxml
+pip install requests
+```
+
 
 # keyword is the terminology and news is filtered with reference to this keyword.
 
