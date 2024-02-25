@@ -2,3 +2,4 @@
 myenv
 __pycache__
 okh_dataset.csv
+glove_word_embedding.txt

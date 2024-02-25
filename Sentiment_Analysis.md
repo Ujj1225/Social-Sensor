@@ -1,8 +1,14 @@
-# Depedency
+### Depedency
 ```bash
-pip install torch
-pip install transformers
+pip install keras
+pip install numpy
+pip install tensorflow
+pip install nltk
+pip install scikit-learn
 ```
 
-Torch to install pytorch for analysis and transformers for loading pretained model.
-The model can also be used by tensorflow but show error on mine(Yujan's) PC.
+#### Using the model
+LSTM_model.keras is the saved model and tokenizer is the saved tokenizer. Sentiment_aanalysis_model.py has a function that gives the sentimental analysis of the text that is passed.
+```py
+from Sentiment_analysis_model import get_sentiment_of_text
+```
