@@ -1,10 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const { sensorModel } = require("../controllers/model");
+const { sensorModel, testing } = require("../controllers/model");
 
-router.get("/", (req, res) => {
-  res.send("Hello Baba!");
-});
+router.get("/", testing);
 
 module.exports = router;
