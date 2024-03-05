@@ -17,7 +17,7 @@ const port = process.env.PORT || 3000;
 const uri = process.env.CONNECTION_STRING;
 
 // Configuring routes
-app.use("/api/v1/users", usersRouter);
+app.use("/api/v1", usersRouter);
 
 // Defining start method to get backend started up!
 const start = () => {
