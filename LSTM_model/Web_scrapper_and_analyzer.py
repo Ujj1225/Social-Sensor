@@ -84,7 +84,7 @@ def get_sentiment_of_text(text):
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 if __name__ == '__main__':
-    existing_file_path = 'okh_dataset.json'
+    existing_file_path = 'LSTM_model/okh_dataset.json'
     post_urls = set()
     # "https://english.onlinekhabar.com"
     # "https://english.onlinekhabar.com/category/political"

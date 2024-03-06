@@ -1,7 +1,7 @@
 #### Depedency
 to get necessary python packages
 ```bash
-python install -r requirement.txt
+pip install -r requirement.txt
 ```
 
 #### Using the model
@@ -16,5 +16,14 @@ The output will be save on okh_dataset.json format with:
 |https://...|The Tax ...|Online ...|Feb ...|..............|0.5...|
 |https://...|The Tax ...|Online ...|Feb ...|..............|0.5...|
 
-Key words ko lagi Post_content vitra keyword xa ki xaina jasari herana.
-Yet coti webscrapp garepaxi feri thyo link lai check gradina tei vara first time badi time lagla. Cuda setup  gerko xau vana GPU vatai webscrapp garxa ra xito hunxa.
+##### Get json file with keyword
+run the python program with keywords, you can give more than one keywords.
+```bash
+python LSTM_model/Keyword_extractor.py "kyeword_1" "keyword_2" "..."
+```
+
+The output will be save on filtered_data.json format with:
+| Link | Title | Author | Date | Sentiment | Occurance |
+|------|-------|--------|------|-----------|-----------|
+|https://...|The Tax ...|Online ...|Feb ...|0.5...|12|
+|https://...|The Tax ...|Online ...|Feb ...|0.5...|12|
