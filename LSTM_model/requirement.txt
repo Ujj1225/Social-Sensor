@@ -1,0 +1,14 @@
+# Web Scrapper
+beautifulsoup4
+lxml
+requests
+
+# Data management
+pandas
+nltk
+numpy
+
+# LSTM model
+keras
+tensorflow
+scikit-learn
