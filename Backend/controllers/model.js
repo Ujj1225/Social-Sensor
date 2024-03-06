@@ -18,7 +18,7 @@ const sensorModel = async (req, res) => {
     }
   });
 
-  await fs.readFile("path/to/your/file.json", "utf8", (err, data) => {
+  await fs.readFile("okh_dataset.json", "utf8", (err, data) => {
     if (err) {
       console.error(err);
       res.status(500).send("Internal Server Error");
