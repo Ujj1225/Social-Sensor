@@ -22,13 +22,16 @@ const sensorModel = async (req, res) => {
     // Wait for the file to be created
     while (true) {
       try {
-        data = await fs.readFile("filtered_data.json", "utf8");
+        data = await fs.readFile(
+          "/home/ujjwaljha/Social-Sensor/filtered_data.json",
+          "utf8"
+        );
         jsonData = JSON.parse(data);
         break; // Exit the loop if successful
       } catch (error) {
         // Handle file not found error
         console.error("File not found. Retrying...");
-        await wait(7000); // Wait for 1 second before retrying
+        await wait(7000); // Wait for 7 second before retrying
       }
     }
     res.json(jsonData);
