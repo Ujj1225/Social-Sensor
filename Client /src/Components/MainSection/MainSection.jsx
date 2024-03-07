@@ -3,7 +3,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 
 function MainSection() {
-  const [publicFigure, setPublicFigure] = useState("");
+  const [publicFigure, setPublicFigure] = useState("kp oli");
   const [keyword, setKeyword] = useState("");
   const [sentimentResult, setSentimentResult] = useState("");
 
@@ -30,35 +30,46 @@ function MainSection() {
   };
 
   return (
-    <div className="mx-32 flex flex-col justify-center items-center">
+    <div className="mx-32 flex flex-col">
       <Header />
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="bg-blue-700 p-8 rounded-2xl h-96 w-auto">
-          <h1 className="text-2xl font-bold mb-4 text-center text-gray-800">
-            Social Media Sentiment Analysis
+      <div className="min-h-screen">
+        <div className="bg-white">
+          <h1 className="text-4xl font-bold mb-4 text-gray-800">
+            Sentiment Analysis
           </h1>
+          <span className=" text-gray-400">
+            What's the sentiment of the media coverage on public figure ?
+          </span>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label className="block font-bold mb-2" htmlFor="publicFigure">
-                Choose a Public Figure or Politician:
+              <label className="block  mb-2 mt-8" htmlFor="publicFigure">
+                Select a Public Figure or Politician
               </label>
               <select
                 id="publicFigure"
                 name="publicFigure"
                 value={publicFigure}
                 onChange={(e) => setPublicFigure(e.target.value)}
-                className="w-full border rounded-md px-3 py-2 outline-none"
+                style={{
+                  maxWidth: "450px",
+                  height: "3.5rem",
+                  backgroundColor: "white",
+                }}
+                className="w-full border rounded-2xl px-3 py-2 outline-none overflow-y-auto"
+                tabIndex={0}
               >
-                <option value="">Select</option>
-                <option value="Elon Musk">Elon Musk</option>
-                <option value="Barack Obama">Barack Obama</option>
-                <option value="Angela Merkel">Angela Merkel</option>
-                {/* Add more options as needed */}
+                Select
+                <option value="kp oli">Kp Oli</option>
+                <option value="sher bahadur">Shre Bahadur Deuba</option>
+                <option value="prachanda">Prachanda</option>
+                <option value="Rabi lamichhhane">Rabi Lamichhane</option>
+                <option value="Swastima khadka">Swastima Khadka</option>
+                <option value="puja sharma">Puja Sharma</option>
               </select>
             </div>
             <div className="mb-4">
-              <label className="block font-bold mb-2" htmlFor="keyword">
-                Enter a Keyword:
+              <label className="block  mb-2" htmlFor="keyword">
+                Enter a Keyword
               </label>
               <input
                 type="text"
@@ -67,14 +78,21 @@ function MainSection() {
                 value={keyword}
                 onChange={(e) => setKeyword(e.target.value)}
                 placeholder="e.g., scandal, controversy"
-                className="w-full border rounded-md px-3 py-2 outline-none"
+                style={{
+                  maxWidth: "450px",
+                  height: "3.5rem",
+                }}
+                className="w-full border rounded-2xl px-3 py-2 outline-none"
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600"
+              style={{
+                maxWidth: "450px",
+              }}
+              className="w-full bg-green-500 text-white py-2 rounded-2xl hover:bg-green-600"
             >
-              Analyze Sentiment
+              See Result
             </button>
           </form>
           {sentimentResult && (
