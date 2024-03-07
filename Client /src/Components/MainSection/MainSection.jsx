@@ -10,7 +10,7 @@ function MainSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Assuming you have an API endpoint for sentiment analysis
+    // api response
     try {
       const response = await fetch("/api/sentiment", {
         method: "POST",

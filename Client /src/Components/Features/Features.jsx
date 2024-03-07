@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types";
 
 // Feature component for individual feature items
 const Feature = ({ title, description, image }) => {
@@ -25,7 +25,6 @@ Feature.propTypes = {
   title: PropTypes.string.isRequired, // Validate title prop as a required string
   description: PropTypes.string.isRequired,
   image: PropTypes.string,
-  // Validate description prop as a required string
 };
 
 // FeatureList component to hold multiple features
@@ -53,7 +52,6 @@ const FeatureList = () => {
 
   return (
     <div className="relative">
-      {/* Grid layout */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4">
         {features.map((feature, index) => (
           <Feature
@@ -72,7 +70,6 @@ const FeatureList = () => {
 const FeatureComponent = () => {
   return (
     <div className="py-12 px-4 flex flex-col items-center justify-center font-montserrat">
-      {/* Heading */}
       <h2 className="text-3xl font-bold text-gray-800 mb-8">How It Works</h2>
       <p className="text-black text-sm text-center w-1/2 mb-8">
         The Social Sensor web app monitors social media for content related to
@@ -81,9 +78,7 @@ const FeatureComponent = () => {
         timely awareness and protection.
       </p>
 
-      {/* Outer border */}
       <div className="border border-gray-300 rounded-lg overflow-hidden">
-        {/* Feature list with arrowhead */}
         <FeatureList />
       </div>
     </div>

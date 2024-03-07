@@ -10,9 +10,11 @@ const Header = () => {
 
       {/* Navigation section */}
       <ul className="flex justify-center items-center gap-20">
-        <li className="text-gray-600 hover:text-purple-700  cursor-pointer">
-          About
-        </li>
+        <Link to="/Hero-section">
+          <li className="text-gray-600 hover:text-purple-700  cursor-pointer">
+            About
+          </li>
+        </Link>
         <li className="text-gray-600 hover:text-purple-700  cursor-pointer">
           Analysis
         </li>

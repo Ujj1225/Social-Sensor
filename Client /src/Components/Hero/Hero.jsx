@@ -25,7 +25,7 @@ const HeroSection = () => {
         </div>
         <Link to="/mainpage">
           <button className="bg-black text-white font-semibold px-6 py-3 rounded-lg shadow-lg cursor-pointer w-32 mt-8">
-            Try Now
+            See More
           </button>
         </Link>
       </div>

@@ -1,18 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "../Pages/LandingPage";
-import MainPage from "../Components/MainPage/MainPage";
 import MainSection from "../Components/MainSection/MainSection";
 import AboutPage from "../Pages/TeamPage";
-// import Chat from "../pages/Chat";
+import ProjectAbstractPage from "../Components/AboutPage/AboutPage";
 
 const AppRoute = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/mainpage" element={<MainPage />} />
+        <Route path="/mainpage" element={<ProjectAbstractPage />} />
         <Route path="/mainsection" element={<MainSection />} />
         <Route path="/our-team" element={<AboutPage />} />
+        <Route path="/Hero-section" element={<LandingPage />} />
       </Routes>
     </Router>
   );
