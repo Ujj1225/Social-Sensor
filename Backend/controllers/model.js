@@ -1,32 +1,28 @@
 const { PythonShell } = require("python-shell");
-const fs = require("fs");
+const fs = require("fs").promises; 
 
 const sensorModel = async (req, res) => {
   const { keyword } = req.body;
+  console.log(keyword);
 
   let options = {
-    scriptPath: "../../LSTM_model/",
+    scriptPath: "/home/ujjwaljha/Social-Sensor/LSTM_model",
     args: [keyword],
   };
 
-  PythonShell.run("Keyword_extractor.py", options, (err, pythonRes) => {
-    if (err) {
-      console.log(err);
-    }
-    if (pythonRes) {
-      console.log(pythonRes);
-    }
-  });
+  try {
+    const pythonRes = await PythonShell.run("Keyword_extractor.py", options);
+    console.log(pythonRes);
 
-  await fs.readFile("filtered_data.json", "utf8", (err, data) => {
-    if (err) {
-      console.error(err);
-      res.status(500).send("Internal Server Error");
-    } else {
-      const jsonData = JSON.parse(data);
-      res.json(jsonData);
-    }
-  });
+    const data = await fs.readFile("filtered_data.json", "utf8");
+    const jsonData = JSON.parse(data);
+    res.json(jsonData);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      error: "Internal Server Error",
+    });
+  }
 };
 
 const testing = async (req, res) => {

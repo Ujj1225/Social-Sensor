@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { sensorModel, testing } = require("../controllers/model");
 
-router.get("/model", sensorModel)
+router.post("/model", sensorModel);
 router.get("/test", testing);
 
 module.exports = router;
