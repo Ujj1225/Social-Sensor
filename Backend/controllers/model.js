@@ -1,5 +1,7 @@
 const { PythonShell } = require("python-shell");
-const fs = require("fs").promises; 
+const fs = require("fs").promises;
+
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const sensorModel = async (req, res) => {
   const { keyword } = req.body;
@@ -14,8 +16,21 @@ const sensorModel = async (req, res) => {
     const pythonRes = await PythonShell.run("Keyword_extractor.py", options);
     console.log(pythonRes);
 
-    const data = await fs.readFile("filtered_data.json", "utf8");
-    const jsonData = JSON.parse(data);
+    let data;
+    let jsonData;
+
+    // Wait for the file to be created
+    while (true) {
+      try {
+        data = await fs.readFile("filtered_data.json", "utf8");
+        jsonData = JSON.parse(data);
+        break; // Exit the loop if successful
+      } catch (error) {
+        // Handle file not found error
+        console.error("File not found. Retrying...");
+        await wait(7000); // Wait for 1 second before retrying
+      }
+    }
     res.json(jsonData);
   } catch (error) {
     console.error(error);
