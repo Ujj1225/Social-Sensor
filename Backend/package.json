@@ -1,0 +1,20 @@
+{
+  "name": "social-sensor",
+  "version": "1.0.0",
+  "description": "Backend for model integration and result management ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Raj Kumar Paneru, Ujjwal Jha, Yujan Subedi",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "mongoose": "^8.2.1",
+    "python-shell": "^5.0.0"
+  }
+}
