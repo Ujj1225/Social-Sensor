@@ -8,10 +8,10 @@ import {
 
 const FeedbackSection = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="w-1/2 p-6">
+    <div className=" flex  justify-center items-center">
+      <div className="w-1/2">
         <div className="text-start ml-48">
-          <h2 className="text-4xl text-start mb-4">
+          <h2 className="text-4xl text-start">
             Send us a{" "}
             <span className=" text-blue-500 cursor-pointer">Message...</span>
           </h2>

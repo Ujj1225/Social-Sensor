@@ -5,7 +5,7 @@ const Choose = ({ title, description }) => {
   return (
     <div className="rounded-lg shadow-md flex flex-col items-center justify-center hover:bg-blue-200">
       <h3 className="text-xl font-semibold text-gray-800 mb-4 mt-4">{title}</h3>
-      <div className="w-1/2 h-p mb-4"></div>
+      <div className="w-1/2 h-p"></div>
       <p className="text-gray-600 text-center">{description}</p>
     </div>
   );
