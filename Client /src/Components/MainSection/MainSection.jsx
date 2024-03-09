@@ -79,9 +79,9 @@ function MainSection() {
 
   //input part
   return (
-    <div className="mx-32 flex flex-col">
+    <div className=" flex flex-col  ">
       <Header />
-      <div className="min-h-screen">
+      <div className=" mx-32 mt-10 min-h-screen">
         <div className="bg-white">
           <h1 className="text-4xl font-bold mb-4 text-gray-800">
             Sentiment Analysis
