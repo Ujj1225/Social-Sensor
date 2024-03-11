@@ -103,6 +103,20 @@ function MainSection() {
   const filteredNews =
     selectedCategory === "all" ? newsText : categorizeNews()[selectedCategory];
 
+  // Function to get background color based on category
+  const getCategoryColor = (category) => {
+    switch (category) {
+      case "positive":
+        return "#82ca9d"; // Green
+      case "neutral":
+        return "#FFD700"; // Yellow
+      case "negative":
+        return "#FF5733"; // Red
+      default:
+        return "#FFFFFF"; // White
+    }
+  };
+
   //input part
   return (
     <div className=" flex flex-col  ">
@@ -253,6 +267,11 @@ function MainSection() {
               </div>
             </div>
           )}
+          <div>
+            <h1 className="text-4xl font-bold mb-4 text-gray-800 text-center mt-32">
+              Would you like to see heading ??
+            </h1>
+          </div>
           <div className="mt-8 justify-center flex space-x-8 gap-11">
             {/* Buttons for sentiment categories */}
             <button
@@ -276,11 +295,19 @@ function MainSection() {
           </div>
 
           {filteredNews && (
-            <div className="mt-4 border border-gray-200 rounded p-4 justify-center bg-yellow-500">
+            <div className="mt-4 border border-gray-200 rounded p-4 justify-center">
               {/* Display filtered news articles */}
               <ul>
                 {filteredNews.map((article, index) => (
-                  <li key={index}>
+                  <li
+                    key={index}
+                    className="mb-2"
+                    style={{
+                      backgroundColor: getCategoryColor(selectedCategory),
+                      padding: "8px",
+                      borderRadius: "5px",
+                    }}
+                  >
                     <span className="font-bold">{index + 1}:</span>{" "}
                     {article.title}
                   </li>
