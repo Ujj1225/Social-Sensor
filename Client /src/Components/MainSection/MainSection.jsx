@@ -16,8 +16,10 @@ import {
 
 function MainSection() {
   const [publicFigure, setPublicFigure] = useState("kp oli");
+  const [newsText, setNewsText] = useState("");
   const [keyword, setKeyword] = useState("");
   const [sentimentResult, setSentimentResult] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +27,6 @@ function MainSection() {
 
     // api
     try {
-      console.log("trying1");
       const response = await fetch("http://localhost:3000/api/v1/model", {
         method: "POST",
         headers: {
@@ -36,10 +37,11 @@ function MainSection() {
           keyword,
         }),
       });
-      console.log("trying2");
       const data = await response.json();
       console.log(data);
       setSentimentResult(data.Sentiment);
+      // console.log(sentimentResult);
+      setNewsText(data.Title);
     } catch (error) {
       console.error("Error analyzing sentiment:", error);
     }
@@ -76,6 +78,44 @@ function MainSection() {
 
   // Colors for PieChart and BarChart
   const COLORS = ["#FF5733", "#82ca9d", "#4299E1"];
+
+  const categorizeNews = () => {
+    const categorizedNews = {
+      positive: [],
+      negative: [],
+      neutral: [],
+    };
+    Object.entries(newsText).forEach(([index, title]) => {
+      const sentimentScore = sentimentResult[index];
+      if (sentimentScore < 0) {
+        categorizedNews.negative.push({ index, title });
+      } else if (sentimentScore >= 0 && sentimentScore <= 0.2) {
+        categorizedNews.neutral.push({ index, title });
+      } else {
+        categorizedNews.positive.push({ index, title });
+      }
+    });
+
+    return categorizedNews;
+  };
+
+  // Filtered news based on selected category
+  const filteredNews =
+    selectedCategory === "all" ? newsText : categorizeNews()[selectedCategory];
+
+  // Function to get background color based on category
+  const getCategoryColor = (category) => {
+    switch (category) {
+      case "positive":
+        return "#82ca9d"; // Green
+      case "neutral":
+        return "#FFD700"; // Yellow
+      case "negative":
+        return "#FF5733"; // Red
+      default:
+        return "#FFFFFF"; // White
+    }
+  };
 
   //input part
   return (
@@ -118,6 +158,7 @@ function MainSection() {
               See Result
             </button>
           </form>
+
           {sentimentResult && (
             <div className="mt-16">
               <h2 className="text-4xl font-bold mb-4 text-gray-800  ">
@@ -135,7 +176,6 @@ function MainSection() {
                   }
                 })}
               </ul>
-
               {/* output result part */}
               <div className=" flex ">
                 <table>
@@ -176,7 +216,6 @@ function MainSection() {
                   </tbody>
                 </table>
               </div>
-
               {/* Bard Chart */}
               <div className="flex mt-12">
                 <div
@@ -226,6 +265,54 @@ function MainSection() {
                   </PieChart>
                 </div>
               </div>
+            </div>
+          )}
+          <div>
+            <h1 className="text-4xl font-bold mb-4 text-gray-800 text-center mt-32">
+              Would you like to see heading ??
+            </h1>
+          </div>
+          <div className="mt-8 justify-center flex space-x-8 gap-11">
+            {/* Buttons for sentiment categories */}
+            <button
+              onClick={() => setSelectedCategory("positive")}
+              className="text-xl font-bold px-4 py-2 rounded-lg bg-green-500 text-white focus:outline-none hover:bg-green-600 text-gree"
+            >
+              Positive News
+            </button>
+            <button
+              onClick={() => setSelectedCategory("neutral")}
+              className="text-xl font-bold px-4 py-2 rounded-lg bg-yellow-500 text-white focus:outline-none hover:bg-yellow-600"
+            >
+              Neutral News
+            </button>
+            <button
+              onClick={() => setSelectedCategory("negative")}
+              className="text-xl font-bold px-4 py-2 rounded-lg bg-red-500 text-white focus:outline-none hover:bg-red-600"
+            >
+              Negative News
+            </button>
+          </div>
+
+          {filteredNews && (
+            <div className="mt-4 border border-gray-200 rounded p-4 justify-center">
+              {/* Display filtered news articles */}
+              <ul>
+                {filteredNews.map((article, index) => (
+                  <li
+                    key={index}
+                    className="mb-2"
+                    style={{
+                      backgroundColor: getCategoryColor(selectedCategory),
+                      padding: "8px",
+                      borderRadius: "5px",
+                    }}
+                  >
+                    <span className="font-bold">{index + 1}:</span>{" "}
+                    {article.title}
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
         </div>
