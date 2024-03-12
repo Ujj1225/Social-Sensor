@@ -1,30 +1,30 @@
 # Social Sensor
 
-# <p align="center"><img src="https://github.com/Ujj1225/from_Taipy-walletWISE/blob/main/assets/wallet_wise_logo.jpg" width=300 /></p>
+# <p align="center"><img src="https://github.com/Ujj1225/Social-Sensor/blob/main/Client%20/src/assets/images/Analysis%20Logo.png" width=300 /></p>
 
 <p align="center">
     <p align="center">
-        <a href="https://github.com/Ujj1225/from_Taipy-walletWISE" target="blank">
-            <img src="https://img.shields.io/github/watchers/Ujj1225/from_Taipy-walletWISE?style=for-the-badge&logo=appveyor" alt="Watchers"/>
+        <a href="https://github.com/Ujj1225/Social-Sensor" target="blank">
+            <img src="https://img.shields.io/github/watchers/Ujj1225/Social-Sensor?style=for-the-badge&logo=appveyor" alt="Watchers"/>
         </a>
-        <a href="https://github.com/Ujj1225/from_Taipy-walletWISE/fork" target="blank">
-            <img src="https://img.shields.io/github/forks/Ujj1225/from_Taipy-walletWISE?style=for-the-badge&logo=appveyor" alt="Forks"/>
+        <a href="https://github.com/Ujj1225/Social-Sensor/fork" target="blank">
+            <img src="https://img.shields.io/github/forks/Ujj1225/Social-Sensor?style=for-the-badge&logo=appveyor" alt="Forks"/>
         </a>
-        <a href="https://github.com/Ujj1225/from_Taipy-walletWISE/stargazers" target="blank">
-            <img src="https://img.shields.io/github/stars/Ujj1225/from_Taipy-walletWISE?style=for-the-badge&logo=appveyor" alt="Star"/>
-        </a>
-    </p>
-    <p align="center">
-        <a href="https://github.com/Ujj1225/from_Taipy-walletWISE/issues" target="blank">
-            <img src="https://img.shields.io/github/issues/Ujj1225/from_Taipy-walletWISE?style=for-the-badge&logo=appveyor" alt="Issue"/>
-        </a>
-        <a href="https://github.com/Ujj1225/from_Taipy-walletWISE/pulls" target="blank">
-            <img src="https://img.shields.io/github/issues-pr/Ujj1225/from_Taipy-walletWISE?style=for-the-badge&logo=appveyor" alt="Open Pull Request"/>
+        <a href="https://github.com/Ujj1225/Social-Sensor/stargazers" target="blank">
+            <img src="https://img.shields.io/github/stars/Ujj1225/Social-Sensor?style=for-the-badge&logo=appveyor" alt="Star"/>
         </a>
     </p>
     <p align="center">
-        <a href="https://github.com/Ujj1225/from_Taipy-walletWISE/blob/master/LICENSE" target="blank">
-            <img src="https://img.shields.io/github/license/Ujj1225/from_Taipy-walletWISE?style=for-the-badge&logo=appveyor" alt="License" />
+        <a href="https://github.com/Ujj1225/Social-Sensor/issues" target="blank">
+            <img src="https://img.shields.io/github/issues/Ujj1225/Social-Sensor?style=for-the-badge&logo=appveyor" alt="Issue"/>
+        </a>
+        <a href="https://github.com/Ujj1225/Social-Sensor/pulls" target="blank">
+            <img src="https://img.shields.io/github/issues-pr/Ujj1225/Social-Sensor?style=for-the-badge&logo=appveyor" alt="Open Pull Request"/>
+        </a>
+    </p>
+    <p align="center">
+        <a href="https://github.com/Ujj1225/Social-Sensor/blob/master/LICENSE" target="blank">
+            <img src="https://img.shields.io/github/license/Ujj1225/Social-Sensor?style=for-the-badge&logo=appveyor" alt="License" />
         </a>
     </p>
 </p>
