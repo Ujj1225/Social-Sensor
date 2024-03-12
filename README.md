@@ -1,6 +1,6 @@
 # Social Sensor
 
-# <p align="center"><img src="https://github.com/Ujj1225/Social-Sensor/blob/main/Client%20/src/assets/images/Analysis%20Logo.png" width=300 /></p>
+# <p align="center"><img src="https://github.com/Ujj1225/Social-Sensor/blob/main/Client%20/src/assets/images/hero-socialmedia.png" width=300 /></p>
 
 <p align="center">
     <p align="center">
@@ -34,11 +34,11 @@
 
 ## Problem Statement
 
-# <p align="center"><img src="https://github.com/Ujj1225/from_Taipy-walletWISE/blob/main/assets/problem.png" width=750 height=425 /></p>
+# <p align="center"><img src="https://github.com/Ujj1225/Social-Sensor/blob/main/Client%20/src/assets/images/problem.png" width=750 height=425 /></p>
 
 ## Solutions
 
-# <p align="center"><img src="https://github.com/Ujj1225/from_Taipy-walletWISE/blob/main/assets/walletWISE_solutions.png" width=750 height=425 /></p>
+# <p align="center"><img src="https://github.com/Ujj1225/Social-Sensor/blob/main/Client%20/src/assets/images/Solution.png" width=750 height=425 /></p>
 
 ## Table of Contents
 
@@ -50,28 +50,26 @@
 
 ## Features
 
-- Income and Expense Tracker
+- Web Scraping Technology
 
-  User can enter their Income, Expense along with the sector as headings. This allows them to comprehend and explore how much they are earning from which sector and how much they are spending on which sector.
+  Social Sensor employs advanced web scraping technology to extract relevant data, focusing on news articles from the Online Khabar portal. This feature ensures a continuous and up-to-date stream of information for users.
   <details>
-    <summary> UI of Tracker </summary>
+    <summary> Web Scrapper </summary>
     <img src="https://github.com/Ujj1225/from_Taipy-walletWISE/blob/main/assets/UI_tracker.png" width=750/>
   </details>
 
-- Insight Box
+- Sentiment Analysis
 
-  Here, User's income and expense are analyzed, mathematically shown and 7 tips for making better, wiser financial decisions are displayed.
+  The application utilizes sentiment analysis to evaluate the tone and sentiment of the gathered data. This feature provides users with valuable insights into how their online mentions are perceived, helping them gauge the overall sentiment surrounding their digital presence.
   <details>
-    <summary> Insight box before getting insights!</summary>
+    <summary> Sentiment Analysis </summary>
     <img src="https://github.com/Ujj1225/from_Taipy-walletWISE/blob/main/assets/insight_box.png" width=750/>
 
-    <summary> Insight box after getting insights!</summary>
-    <img src="https://github.com/Ujj1225/from_Taipy-walletWISE/blob/main/assets/after_insight.png" width=750/>
   </details>
 
 - Realtime Visualization
 
-  Implemented a visualizer where you can see the different headings from which you earnt money and the different headings on which you spent it.
+  Implemented a visualizer where you can see the different headings/ news. It clearly helps us visualize the positive, negative and neutral topics.
   <details>
     <summary> Visualization </summary>
     <img src="https://github.com/Ujj1225/from_Taipy-walletWISE/blob/main/assets/visualizer.png" width=750/>
@@ -100,20 +98,25 @@ Before running Social Sensor, you must set it up by following the given setup pr
 2. Installation of required packages
 
 ### Frontend
-   ```bash
+
+```bash
 cd Client
 npm install
-   ```
-### Backend 
+```
+
+### Backend
+
 ```bash
 cd Backend
 npm install
-   ```
-### Model 
+```
+
+### Model
+
 ```bash
 cd LSTM_model
 pip install -r requirements.txt
-   ```
+```
 
 3. Setting up .env file for Backend
 
@@ -129,6 +132,7 @@ pip install -r requirements.txt
 - Frontend and Backend file must be run together.
 
 #### Frontend
+
 - Navigate to Client then:
 
 ```bash
@@ -136,6 +140,7 @@ pip install -r requirements.txt
 ```
 
 #### Backend
+
 - Navigate to Backend then:
 
 ```bash
@@ -143,7 +148,6 @@ pip install -r requirements.txt
 ```
 
 # You are all set to use the application!
-
 
 ## Dependencies
 
