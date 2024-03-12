@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../Header";
 import Footer from "../Footer";
 import {
@@ -53,21 +53,23 @@ function MainSection() {
       {
         name: "Negative",
         value: sentimentResult
-          ? Object.values(sentimentResult).filter((score) => score < 0).length
+          ? Object.values(sentimentResult).filter(
+              (score) => score > 0 && score <= 0.55
+            ).length
           : 0,
       },
       {
         name: "Neutral",
         value: sentimentResult
           ? Object.values(sentimentResult).filter(
-              (score) => score >= 0 && score <= 0.2
+              (score) => score > 0.55 && score <= 0.8
             ).length
           : 0,
       },
       {
         name: "Positive",
         value: sentimentResult
-          ? Object.values(sentimentResult).filter((score) => score > 0).length
+          ? Object.values(sentimentResult).filter((score) => score > 0.8).length
           : 0,
       },
     ];
@@ -87,9 +89,9 @@ function MainSection() {
     };
     Object.entries(newsText).forEach(([index, title]) => {
       const sentimentScore = sentimentResult[index];
-      if (sentimentScore < 0) {
+      if (sentimentScore <= 0.55) {
         categorizedNews.negative.push({ index, title });
-      } else if (sentimentScore >= 0 && sentimentScore <= 0.2) {
+      } else if (sentimentScore > 0.55 && sentimentScore <= 0.8) {
         categorizedNews.neutral.push({ index, title });
       } else {
         categorizedNews.positive.push({ index, title });
@@ -116,6 +118,14 @@ function MainSection() {
         return "#FFFFFF"; // White
     }
   };
+
+  useEffect(() => {
+    const positiveButton = document.getElementById("positiveButton");
+
+    if (positiveButton) {
+      positiveButton.click();
+    }
+  }, []); 
 
   //input part
   return (
@@ -275,6 +285,7 @@ function MainSection() {
           <div className="mt-8 justify-center flex space-x-8 gap-11">
             {/* Buttons for sentiment categories */}
             <button
+              id="positiveButton"
               onClick={() => setSelectedCategory("positive")}
               className="text-xl font-bold px-4 py-2 rounded-lg bg-green-500 text-white focus:outline-none hover:bg-green-600 text-gree"
             >
