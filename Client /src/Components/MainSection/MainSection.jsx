@@ -37,11 +37,19 @@ function MainSection() {
           keyword,
         }),
       });
+      console.log("here");
       const data = await response.json();
       console.log(data);
-      setSentimentResult(data.Sentiment);
+      if (Object.keys(data).length === 0) {
+        console.warn("Empty response from the backend.");
+        // Handle the case when the backend returns an empty response
+        // For example, you can set a message or keep the existing data
+      } else {
+        setSentimentResult(data.Sentiment);
+        setNewsText(data.Title);
+      }
+
       // console.log(sentimentResult);
-      setNewsText(data.Title);
     } catch (error) {
       console.error("Error analyzing sentiment:", error);
     }
@@ -125,7 +133,7 @@ function MainSection() {
     if (positiveButton) {
       positiveButton.click();
     }
-  }, []); 
+  }, []);
 
   //input part
   return (
