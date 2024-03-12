@@ -43,7 +43,6 @@
 ## Table of Contents
 
 - [Features](#features)
-- [Demo](#demo)
 - [Installation](#installation)
 - [Dependencies](#dependencies)
 - [License](#license)
@@ -55,7 +54,7 @@
   Social Sensor employs advanced web scraping technology to extract relevant data, focusing on news articles from the Online Khabar portal. This feature ensures a continuous and up-to-date stream of information for users.
   <details>
     <summary> Web Scrapper </summary>
-    <img src="https://github.com/Ujj1225/from_Taipy-walletWISE/blob/main/assets/UI_tracker.png" width=750/>
+    <img src="https://github.com/Ujj1225/Social-Sensor/blob/main/Client%20/src/assets/images/img1.png" width=750/>
   </details>
 
 - Sentiment Analysis
@@ -63,7 +62,7 @@
   The application utilizes sentiment analysis to evaluate the tone and sentiment of the gathered data. This feature provides users with valuable insights into how their online mentions are perceived, helping them gauge the overall sentiment surrounding their digital presence.
   <details>
     <summary> Sentiment Analysis </summary>
-    <img src="https://github.com/Ujj1225/from_Taipy-walletWISE/blob/main/assets/insight_box.png" width=750/>
+    <img src="https://github.com/Ujj1225/Social-Sensor/blob/main/Client%20/src/assets/images/img2.png" width=750/>
 
   </details>
 
@@ -72,12 +71,8 @@
   Implemented a visualizer where you can see the different headings/ news. It clearly helps us visualize the positive, negative and neutral topics.
   <details>
     <summary> Visualization </summary>
-    <img src="https://github.com/Ujj1225/from_Taipy-walletWISE/blob/main/assets/visualizer.png" width=750/>
+    <img src="https://github.com/Ujj1225/Social-Sensor/blob/main/Client%20/src/assets/images/img3.png" width=750/>
   </details>
-
-## Demo
-
-https://github.com/SusheelThapa/from_taipy_census/assets/83917129/025733fe-d963-4ed1-8de5-5a514a4a6070
 
 ## Installation
 
@@ -124,7 +119,7 @@ pip install -r requirements.txt
 
   ```bash
   PORT = (You can use any but default is: 3000)
-  CONNECTION_STRING = mongodb+srv://ujj1225:12345@news.qeoe8li.mongodb.net/
+  CONNECTION_STRING =
   ```
 
 4. Running the project:
