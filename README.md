@@ -82,7 +82,7 @@ Before running Social Sensor, you must set it up by following the given setup pr
 
 ### Setup
 
-#### Follow the given steps to set up walletWISE
+#### Follow the given steps to set up Social-Sensor
 
 1. Clone the repository:
 
